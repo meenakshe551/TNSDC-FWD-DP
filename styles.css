@@ -1,0 +1,181 @@
+/* General body styling */
+body {
+    font-family: 'Inter', sans-serif;
+    /* Reset cursor to default */
+    cursor: auto;
+}
+
+/* Styling for the custom message box */
+.message-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    z-index: 10000;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.message-box.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Header Styling */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+/* Hero Section */
+#home {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+#home .w-48 {
+    transition: all 0.3s ease-in-out;
+}
+
+#home .w-48:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.5);
+}
+
+/* About Section */
+#about {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#about:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(128, 0, 128, 0.4);
+    border: 2px solid #9c27b0;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+}
+
+footer .max-w-xl {
+    transition: all 0.3s ease;
+}
+
+footer .max-w-xl:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid #9c27b0;
+}
+
+/* Footer Social Icons */
+footer .flex {
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+footer .text-2xl {
+    transition: color 0.3s ease;
+}
+
+footer .text-2xl:hover {
+    color: #fff;
+}
+
+/* Custom Button Styling */
+button {
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #7b1fa2;
+}
+
+/* Form Styles */
+textarea {
+    background-color: #2d2d2d;
+    color: #fff;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    border: none;
+    width: 100%;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+textarea:focus {
+    background-color: #333;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
+}
+
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Button inside form */
+button[type="submit"] {
+    background-color: #9c27b0;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #7b1fa2;
+}
+
+/* General Link Hover Effect */
+a:hover {
+    color: #9c27b0;
+}
+
+/* Add some extra padding to the footer text */
+footer .text-center {
+    font-size: 0.875rem;
+    margin-top: 2rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .text-5xl {
+        font-size: 3rem;
+    }
+
+    .text-2xl {
+        font-size: 1.25rem;
+    }
+    
+    .container {
+        padding: 2rem;
+    }
+
+    #about .grid {
+        grid-template-columns: 1fr;
+    }
+}
